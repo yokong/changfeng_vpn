@@ -1,9 +1,9 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：2023-03-03 20:53:32
+# 创建时间：2023-03-03 22:18:16
 # 使用模版：V2RaySE 默认模版
-# 节点数量：6
+# 节点数量：10
 ####################################
 mixed-port: 7890
 allow-lan: true
@@ -21,81 +21,109 @@ dns:
     - tls://dns.google:853
 
 proxies:
-  - {"name":"日本 东京都品川区Linode数据中心","type":"vmess","server":"vjp2.0bad.com","port":443,"cipher":"auto","uuid":"927094d3-d678-4763-8591-e240d0bcae87","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/chat","headers":{"host":"vjp2.0bad.com"}}}
-  - {"name":"美国 theplanet","type":"vmess","server":"174.136.207.177.xhtk.cc","port":443,"cipher":"none","uuid":"fb602bcb-ff93-21da-7c9b-1a94c037208f","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"174.136.207.177.xhtk.cc","network":"ws","ws-opts":{"path":"/kmbkvws","headers":{"host":"174.136.207.177.xhtk.cc"}}}
-  - {"name":"美国+麻省理工学院","type":"trojan","server":"ql02-sg.aikun.online","port":10000,"udp":true,"password":"c6d8be6f-cf07-4c2e-b1be-da5fd49868b0","sni":"ql01-sg03.aikun.online","skip-cert-verify":true}
-  - {"name":"香港+Amazon数据中心","type":"trojan","server":"s-hk01.aikun.online","port":10000,"udp":true,"password":"c6d8be6f-cf07-4c2e-b1be-da5fd49868b0","skip-cert-verify":true}
-  - {"name":"美国 Amazon EC2服务器","type":"vmess","server":"in2.microsoftjs.top","port":80,"cipher":"auto","uuid":"c3dd41cd-6d20-4318-a7e4-456e032b1ef3","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/filestreamingservice/files/20f813e2-036a-42a8-92e2-a3a55a0b239b","headers":{"host":"tlu.dl.delivery.mp.microsoft.com"}}}
-  - {"name":"美国 CloudFlare节点","type":"vmess","server":"cf.515188.xyz","port":80,"cipher":"auto","uuid":"05ab5fed-281d-4882-c29c-3c6dc8434fb0","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/ray","headers":{"host":"3woi.weigogogo.tk"}}}
+  - {"name":"🇺🇸_US_美国_1","type":"ss","server":"34.209.215.97","port":443,"password":"amazonskr05","cipher":"aes-256-cfb"}
+  - {"name":"🇯🇵_JP_日本","type":"ss","server":"43.207.166.104","port":443,"password":"amazonskr05","cipher":"aes-256-cfb"}
+  - {"name":"🇸🇬_SG_新加坡_1","type":"ss","server":"18.141.224.98","port":443,"password":"amazonskr05","cipher":"aes-256-cfb"}
+  - {"name":"🇭🇰_HK_香港","type":"vmess","server":"96cfae9d-7c6c-0722-5eb8-a2b8e9d53aee.cnnic.rip","port":80,"cipher":"auto","uuid":"9589b882-569a-43c5-924e-a9e852d4ff9e","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws"}
+  - {"name":"🇺🇸_US_美国_2","type":"ss","server":"54.186.216.67","port":443,"password":"amazonskr05","cipher":"aes-256-cfb"}
+  - {"name":"🇷🇺_RU_俄罗斯联邦","type":"trojan","server":"insaneguo2333.top","port":443,"udp":true,"password":"1d0a80ca-0f96-4016-ac51-c284dedd28a1","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇸🇬_SG_新加坡_2","type":"trojan","server":"sgb.mdfg.tk","port":443,"udp":true,"password":"yAcqvPOj","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇨🇳_CN_中国_1","type":"ss","server":"cdn.alibaba-kunlun.com","port":14102,"password":"e1af570e-b7e2-402d-a60e-a363ffdfee7e","cipher":"aes-128-gcm"}
+  - {"name":"🇨🇳_CN_中国_2","type":"ss","server":"cdn.alibaba-kunlun.com","port":14101,"password":"e1af570e-b7e2-402d-a60e-a363ffdfee7e","cipher":"aes-128-gcm"}
+  - {"name":"🇨🇳_CN_中国->🇭🇰_HK_香港","type":"vmess","server":"9a5ccc45-215e-3472-502c-1b1a055a609c.cnnic.rip","port":80,"cipher":"auto","uuid":"9589b882-569a-43c5-924e-a9e852d4ff9e","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws"}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 日本 东京都品川区Linode数据中心
-      - 美国 theplanet
-      - 美国+麻省理工学院
-      - 香港+Amazon数据中心
-      - 美国 Amazon EC2服务器
-      - 美国 CloudFlare节点
+      - 🇺🇸_US_美国_1
+      - 🇯🇵_JP_日本
+      - 🇸🇬_SG_新加坡_1
+      - 🇭🇰_HK_香港
+      - 🇺🇸_US_美国_2
+      - 🇷🇺_RU_俄罗斯联邦
+      - 🇸🇬_SG_新加坡_2
+      - 🇨🇳_CN_中国_1
+      - 🇨🇳_CN_中国_2
+      - 🇨🇳_CN_中国->🇭🇰_HK_香港
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 日本 东京都品川区Linode数据中心
-      - 美国 theplanet
-      - 美国+麻省理工学院
-      - 香港+Amazon数据中心
-      - 美国 Amazon EC2服务器
-      - 美国 CloudFlare节点
+      - 🇺🇸_US_美国_1
+      - 🇯🇵_JP_日本
+      - 🇸🇬_SG_新加坡_1
+      - 🇭🇰_HK_香港
+      - 🇺🇸_US_美国_2
+      - 🇷🇺_RU_俄罗斯联邦
+      - 🇸🇬_SG_新加坡_2
+      - 🇨🇳_CN_中国_1
+      - 🇨🇳_CN_中国_2
+      - 🇨🇳_CN_中国->🇭🇰_HK_香港
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 日本 东京都品川区Linode数据中心
-      - 美国 theplanet
-      - 美国+麻省理工学院
-      - 香港+Amazon数据中心
-      - 美国 Amazon EC2服务器
-      - 美国 CloudFlare节点
+      - 🇺🇸_US_美国_1
+      - 🇯🇵_JP_日本
+      - 🇸🇬_SG_新加坡_1
+      - 🇭🇰_HK_香港
+      - 🇺🇸_US_美国_2
+      - 🇷🇺_RU_俄罗斯联邦
+      - 🇸🇬_SG_新加坡_2
+      - 🇨🇳_CN_中国_1
+      - 🇨🇳_CN_中国_2
+      - 🇨🇳_CN_中国->🇭🇰_HK_香港
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 日本 东京都品川区Linode数据中心
-      - 美国 theplanet
-      - 美国+麻省理工学院
-      - 香港+Amazon数据中心
-      - 美国 Amazon EC2服务器
-      - 美国 CloudFlare节点
+      - 🇺🇸_US_美国_1
+      - 🇯🇵_JP_日本
+      - 🇸🇬_SG_新加坡_1
+      - 🇭🇰_HK_香港
+      - 🇺🇸_US_美国_2
+      - 🇷🇺_RU_俄罗斯联邦
+      - 🇸🇬_SG_新加坡_2
+      - 🇨🇳_CN_中国_1
+      - 🇨🇳_CN_中国_2
+      - 🇨🇳_CN_中国->🇭🇰_HK_香港
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 日本 东京都品川区Linode数据中心
-      - 美国 theplanet
-      - 美国+麻省理工学院
-      - 香港+Amazon数据中心
-      - 美国 Amazon EC2服务器
-      - 美国 CloudFlare节点
+      - 🇺🇸_US_美国_1
+      - 🇯🇵_JP_日本
+      - 🇸🇬_SG_新加坡_1
+      - 🇭🇰_HK_香港
+      - 🇺🇸_US_美国_2
+      - 🇷🇺_RU_俄罗斯联邦
+      - 🇸🇬_SG_新加坡_2
+      - 🇨🇳_CN_中国_1
+      - 🇨🇳_CN_中国_2
+      - 🇨🇳_CN_中国->🇭🇰_HK_香港
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 日本 东京都品川区Linode数据中心
-      - 美国 theplanet
-      - 美国+麻省理工学院
-      - 香港+Amazon数据中心
-      - 美国 Amazon EC2服务器
-      - 美国 CloudFlare节点
+      - 🇺🇸_US_美国_1
+      - 🇯🇵_JP_日本
+      - 🇸🇬_SG_新加坡_1
+      - 🇭🇰_HK_香港
+      - 🇺🇸_US_美国_2
+      - 🇷🇺_RU_俄罗斯联邦
+      - 🇸🇬_SG_新加坡_2
+      - 🇨🇳_CN_中国_1
+      - 🇨🇳_CN_中国_2
+      - 🇨🇳_CN_中国->🇭🇰_HK_香港
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -118,12 +146,16 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 日本 东京都品川区Linode数据中心
-      - 美国 theplanet
-      - 美国+麻省理工学院
-      - 香港+Amazon数据中心
-      - 美国 Amazon EC2服务器
-      - 美国 CloudFlare节点
+      - 🇺🇸_US_美国_1
+      - 🇯🇵_JP_日本
+      - 🇸🇬_SG_新加坡_1
+      - 🇭🇰_HK_香港
+      - 🇺🇸_US_美国_2
+      - 🇷🇺_RU_俄罗斯联邦
+      - 🇸🇬_SG_新加坡_2
+      - 🇨🇳_CN_中国_1
+      - 🇨🇳_CN_中国_2
+      - 🇨🇳_CN_中国->🇭🇰_HK_香港
 
 rules:
 # 本地/局域网地址
